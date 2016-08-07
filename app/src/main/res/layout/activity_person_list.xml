@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/person_list" />
+
+
+    </FrameLayout>
+
+    <!--<Spinner-->
+        <!--android:background="@drawable/spinner_background"-->
+        <!--android:spinnerMode="dropdown"-->
+        <!--android:layout_margin="@dimen/spinner_margin"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:id="@+id/spinner"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:textAlignment="center" />-->
+    <LinearLayout
+        android:layout_margin="@dimen/spinner_margin"
+        android:layout_gravity="bottom|end"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/spinner_background"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:id="@+id/spinner_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@android:drawable/arrow_down_float" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
